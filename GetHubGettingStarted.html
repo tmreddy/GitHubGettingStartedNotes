@@ -42,16 +42,104 @@
             <li>An editor Visual Studio Code</li>
             <li>GitHub account</li>
         </ol>
-        <h3>Setting up your machine</h3>
+        <h3>Setting up git on your windows machine</h3>
         <ol>
             <li>download and install git on your machine</li>
             <li>git config --global user.name "mreddy"</li>
             <li>git config --global user.email "t.mallikarjunreddy@gmail.com</li>
             <li>git config --edit --global</li>
-            <li></li>
+            <li>git config --global "core.editor "code --wait --new-window" : code is the bash command to open VSCode --wait is for the cursor to wait till the VSCode window is closed</li>
         </ol>
+        <h3>Foundations of Git</h3>
+        <div>
+            <h4>The 3 states of Git</h4>
+            <ol>
+                <li>Commited</li>
+                <li>Modified</li>
+                <li>Staged</li>
+            </ol>
+            <h4>The 3 Areas of Git</h4>
+            <ol>
+                <li>Working directory</li>
+                <li>Staging area</li>
+                <li>.git repo</li>
+                <li>Remote repo GitHub</li>
+            </ol>
+            <h4>Working with Git</h4>
+            <ol>
+                <li>CLI</li>
+                <li>GitHub Desktop</li>
+                <li>SourceTree</li>
+                <li>Tower</li>
+            </ol>
+            <h4>Most common git commands</h4>
+            <ol>
+                <li>git: all commands starts with git, giving git at command line will show help</li>
+                <li>git config: Configure the tooling</li>
+                <li>git init: Initialize a git local repo .git directory will be created</li>
+                <li>git clone: Download a project from remote</li>
+                <li>git add: Prepare a file to staging</li>
+                <li>git commit: Commit a file to the repo</li>
+            </ol>
+            <h4>Demo</h4>
+            <ol>
+                <li>mkdir pluralsight</li>
+                <li>cd pluralsight</li>
+                <li>git init</li>
+                <li>ls -la</li>
+                <li>git status</li>
+                <li>code .: opens VScode</li>
+                <li>create new file readme.md file</li>
+                <li>write Hello world in readme.md file and save</li>
+                <li>git status: Untracked files readme.md</li>
+                <li>git add readme.md: will start tracking new file</li>
+                <li>git status</li>
+                <li>git commit -m "new commit"</li>
+                <li>git status</li>
+                <li>add new 3files</li>
+                <li>git status: 3 new files </li>
+                <li>git commit -am "3 new files"</li>
+                <li>git log</li>
+            </ol>
+        </div>
     </div>
     <h1>Getting Started with GitHub</h1>
+    <h3>Understanding GitHub</h3>
+    <div>
+        <h4>What is GitHub?</h4>
+        <ol>
+            <li>Hosting service for Git</li>
+            <li>Git and a lot of extras</li>
+            <li>Social aspect of coding</li>
+            <li>Part of Microsoft since 2018</li>
+            <li>2020 40M users</li>
+        </ol>
+        <h4>GitHub's Main Features</h4>
+        <ol>
+            <li>Code</li>
+            <li>Pull requests</li>
+            <li>Issues</li>
+            <li>CI/CD</li>
+        </ol>
+        <h4>A tour to GitHub</h4>
+        <ol>
+            <li>Creating your own GitHub account</li>
+            <li>Configuring your profile</li>
+            <li>Following other users on GitHub</li>
+        </ol>
+        <h4>Using SSH</h4>
+        <ol>
+            <li>HTTPS: Requires username and password</li>
+            <li>SSH: Easier to work with</li>
+            <li>Generating SSH Keys</li>
+            <li>Connecting to GitHub using SSH</li>
+            <li>at root dir ls -al ~/.ssh to get the list of SSH keys</li>
+            <li>Create SSH Key: ssh-keygen -t rsa -b 4096 -c "t.mallikarjunreddy@gmail.com"</li>
+            <li>verify SSH agent running: eval $(ssh-agent -s)</li>  
+            <li>add SSH key: ssh-add ~/.ssh/id_rsa</li>  
+            <li>ssh -t git@github.com</li>
+        </ol>
+    </div>
     <h1>Working with Repositories</h1>
     <h1>Collaborating Using and Creating Releases</h1>
     <h1>Tracking Issues and Creating Releases</h1>
