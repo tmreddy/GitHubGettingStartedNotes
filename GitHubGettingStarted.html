@@ -158,10 +158,581 @@
         </ol>
     </div>
     <h1>Working with Repositories</h1>
+    <h4>Understanding Repositories</h4>
+    <div>
+        <ol>
+            <li>Repositories are the building block of GitHub - think like a folder for you project</li>
+            <li>Repositories can be public or private. Even though public not everyone can modify the code only contributors can do the changes</li>
+            <li>GitHub is the Remote</li>
+        </ol>
+        <h4>Locally we have following directories</h4>
+        <ol>
+            <li>Working directory</li>
+            <li>Staging area</li>
+            <li>.git repo</li>
+        </ol>
+        <h4>Demo</h4>
+        <ol>
+            <li>On GitHub Click on Repositories, Click New to create new repository</li>
+            <li>Give a repository name</li>
+            <li>Give Description</li>
+            <li>Public or private</li>
+            <li>Add readme file</li>
+            <li>Add gitignore</li>
+            <li>Choose template</li>
+            <li>Choose a license: always choose</li>
+            <li>Select license type GNU general license type</li>
+            <li>We can write about the repository</li>
+            <li>Code tab have one branch</li>
+            <li>we can add files or create files</li>
+            <li>we can download the code</li>
+            <li>last commit</li>
+        </ol>
+        <h4>Connecting with GitHub locally</h4>
+        <div>
+            <ol>
+                <li>Clone existing repository</li>
+                <li>Create or update files</li>
+                <li>git add</li>
+                <li>git commit</li>
+                <li>git Fetch</li>
+                <li>git merge</li>
+                <li>git pull: performs fetch and merge</li>    
+                <li>git push</li>
+            </ol>
+        </div>
+        <h4>Demo</h4>
+        <ol>
+            <li>Create new repository "GitHubLab"</li>
+            <li>Private, gitignore visualstudio, License</li>
+            <li>Clone the GitHubLab repository</li>
+            <li>ls -la</li>
+            <li>git status</li>
+            <li>Copy assets, images,favicon.ico index.html files from excerise files to GitHubLab directory</li>
+            <li>git status: now we see 4 untracked files</li>
+            <li>git add .</li>
+            <li>git commit -m "website files added</li>
+            <li>git push origin main</li>
+            <li>in github portal change the index.html and add new file instructions.txt</li>
+            <li>git fetch</li>
+            <li>git status: Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.</li>
+            <li>git pull</li>
+            <li>git status: Your branch is up to date with 'origin/main'.</li>
+            <li>in local change index.html by adding awsome save</li>
+            <li>git add .</li>
+            <li>git commit -m "updated index.html"</li>
+            <li>update instruction.txt on github portal</li>
+            <li>git push: will throw this error ! [rejected]        main -> main (fetch first)
+                error: failed to push some refs to 'github.com-Mallikarjun:tmreddy/GitHubLab.git'
+                hint: Updates were rejected because the remote contains work that you do
+                hint: not have locally. This is usually caused by another repository pushing
+                hint: to the same ref. You may want to first integrate the remote changes
+                hint: (e.g., 'git pull ...') before pushing again.</li>
+            <li>git pull</li>
+            <li>git status</li>
+            <li>git push orgin main</li>
+        </ol>
+        <h4>Adding special files</h4>
+        <div>
+            <ol>
+                <li>README is a special file known by GitHub: ROOT, .github or docs folder</li>
+                <li>Rendered automatically on repository landing page</li>
+                <li>Typically written in markdown(.md)</li>
+                <li>license.md</li>
+                <li>contributing and contributors</li>
+                <li>changelog</li>
+                <li>support</li>
+                <li>code_of_conduct</li>
+                <li>Codeowners</li>
+            </ol>
+        </div>
+        <h4>Sample markdown syntax</h4>
+        <ol>
+            <li># this is an H1</li>
+            <li>## this is an H2</li>
+            <li>* Red</li>
+            <li>* Green</li>
+            <li>* Blue</li>
+            <li><a href="https://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener noreferrer"></a></li>
+        </ol>
+        <h4>Administring your repository - Repository Features</h4>
+        <ol>
+            <li>Topics</li>
+            <li>Projects</li>
+            <li>Issues</li>
+            <li>Pull Requests</li>
+            <li>Insights</li>
+            <li>Settings</li>
+        </ol>
+        <h4>Demo for Repositiry features</h4>
+        <ol>
+            <li>Adding Topics: clicke on the setting next to about add topics html css jquery, once done we can see these topics just below the about</li>
+            <li>we can click on the topics, github will search for that topic repositories</li>
+            <li>Issues, we can create issues to track everything about the repository like to-do, bugs etc.</li>
+            <li>Click on issues tab create new issue </li>
+            <li>Click project to create or link existing projects</li>
+        </ol>
+        <h4>Bringing in More Users</h4>
+        <ol>
+            <li>Collaborators: Core team of the project</li>
+            <li>Contributors: Lower permission</li>
+        </ol>
+        <h4>Demo to add collaborators</h4>
+        <ol>
+            <li>Click settings</li>
+            <li>manage access</li>
+            <li>send invite</li>
+        </ol>
+        <h4>Repository Insights</h4>
+        <ol>
+            <li>Contributors</li>
+            <li>Commits</li>
+            <li>Traffic</li>
+            <li>Code Frequncy</li>
+            <li></li>
+        </ol>
+    </div>
     <h1>Collaborating Using and Creating Releases</h1>
+    <div>
+        <h4>Working with branches</h4>
+        <div>
+            <ol>
+                <li>Branching traditionally means diverging from the main development line.</li>
+                <li>Expensive operation in other source control</li>
+            </ol>
+            <h5>Branching in Git</h5>
+            <ol>
+                <li>Much more lightweight</li>
+                <li>Branching is very fast</li>
+                <li>Encouraged to be used</li>
+                <li>Works because of the way Git works [Snapshots]</li>
+                <li>Branch is a pointer to a commit</li>
+                <li>Default branch is main</li>
+                <li>points to latest commit</li>
+                <li>Moves forward with every commit</li>
+                <li>Use branches for features, bug fixes and experiments</li>
+            </ol>
+        </div>
+        <h4>Demo creating branchs on GitHub</h4>
+        <div>
+            <ol>
+                <li>Main branch is the Default branch</li>
+                <li>Create SampleBranch: automatically switched to SampleBranch</li>
+                <li>Change instruction.txt file in the samplebranch</li>
+                <li>Commit the changes</li>
+                <li>Compare and pull requests</li>
+                <li>This branch is 1 commit ahead of main branch</li>
+            </ol>
+        </div>
+        <h4>Demo creating branches with Git</h4>
+        <div>
+            <ol>
+                <li>git status</li>
+                <li>git checkout -b add-more-instructions</li>
+                <li>code .</li>
+                <li>update instructions.txt file, save</li>
+                <li>git status</li>
+                <li>git commit -am "updated instructions"</li>
+                <li>git push -u origin add-more-instructions</li>
+                <li>go to github and see new branch created</li>
+            </ol>
+        </div>
+        <h4>Understanding Branching Strategies</h4>
+        <div>
+            <ol>
+                <li>Set of rules, when you should create branch </li>
+                <li>Define workflow for branches</li>
+                <li>Different options exist</li>
+                <li>Centralized workflow: one single branch</li>
+                <li>Gitflow workflow: two main long living branches main and development</li>
+                <li>Forking workflow</li>
+                <li>GitHub Wrokflow</li>
+            </ol>
+        </div>
+        <h4>Understaing the GitHub workflow</h4>
+        <div>
+            <ol>
+                <li>Lightweight</li>
+                <li>Favored by GitHub</li>
+                <li>Branches for bugs, features</li>
+                <li>Evolves around pull requests</li>
+            </ol>
+        </div>
+        <h4>Pull Requests</h4>
+        <div>
+            <ol>
+                <li>Announces a push to a branch</li>
+                <li>Discuss-review changes add more commits</li>
+                <li>Merge</li>
+            </ol>
+        </div>
+        <h4>Demo for pull request</h4>
+        <div>
+            <ol>
+                <li>Go to GitHub now we see three branches</li>
+                <li>Apart from main branch we can see New pull request options</li>
+                <li>Goto pullrequests tab, select new pullreqeust</li>
+                <li>Select branche to merge</li>
+                <li>Create pull request, pull request is created with the same commit message</li>
+                <li>we can see how many contributed, how many commits, how manu files changes, what are the changes, review the changes</li>
+                <li>we can see the differences in split form, click + to add comments for review</li>
+                <li>once pull request is created it is show if there are any conflits, if no conflits github will show merge</li>
+                <li>once successful merge GitHub will show delete branch option</li>
+                <li>git branch -r</li>
+                <li>git fetch</li>
+                <li>git checkout add-installation-file</li>
+            </ol>
+        </div>
+        <h4>Merge conflicts</h4>
+        <div>
+            <ol>
+                <li>Editing on the same line</li>
+                <li>Editing an already deleted file</li>
+                <li>Merge conflicts need to be solved before a merge can happen</li>
+                <li>Merging can be done on GitHub</li>
+                <li>below are local diff tools</li>
+                <li>Kdiff3</li>
+                <li>vimdiff3</li>
+                <li>P4Merge</li>
+                <li>Beyond Compare</li>
+            </ol>        
+        </div>
+        <h4>Pull Request template</h4>
+        <div>
+            <ol>
+                <li>Create new file in root directory pull_request_template.md</li>
+                <li>This will be the templete for new pull requests</li>
+            </ol>
+        </div>
+        <h4>Revert pull request</h4>
+        <div>
+            <ol>
+                <li>Reversting a pull request intrun creates a new pull request</li>
+                <li>Click on the closed pull request</li>
+                <li>Click revert, which will create a pull request</li>
+                <li>Resolve any conflicts and merge</li>
+            </ol>
+        </div>
+        <h4>Forking</h4>
+        <div>
+            <ol>
+                <li>Copy of a repo</li>
+                <li>Does't impact the orginal repo</li>
+                <li>Changes can be merged again via pull requests</li>
+                <li>Availiable to do for anyone</li>
+                <li>It's your repository now</li>
+            </ol>
+        </div>
+        <h4>Demo of Forkign</h4>
+        <div>
+            <ol>
+                <li>On the repository page we can find fork icon on right top side</li>
+                <li>Click on fork icon, a dialog will come where should we fork GitHubLab</li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
     <h1>Tracking Issues and Creating Releases</h1>
+    <div>
+        <h4>Working with issues</h4>
+        <div>
+            <ol>
+                <li>Bugs</li>
+                <li>Enhancements</li>
+                <li>Tasks</li>
+                <li>Ideas</li>
+                <li>Association with pull request</li>
+                <li>Notifications</li>
+                <li>Combined towards a milestore</li>
+                <li>GitHub issues tracker</li>
+            </ol>
+        </div>
+        <h4>Lables</h4>
+        <div>
+            <ol>
+                <li>Lables can be associated with pullrequest and with issues </li>
+
+                <li>There are 9 default lables</li>
+                <li>bug</li>
+                <li>duplicate</li>
+                <li>enhancement</li>
+                <li>help wanted</li>
+                <li>question</li>
+                <li>wontfix</li>
+                <li>good first issue</li>
+                <li>invalid</li>
+                <li>documentation</li>
+            </ol>
+        </div>
+        <h4>Demo Issues</h4>
+        <div>
+            <ol>
+                <li>Open issues in a repo, if not found go to setting and enable issue</li>
+                <li>Click new issue button</li>
+                <li>Assign to someone/myself</li>
+                <li>Apply a label</li>
+                <li>Assign to milestone</li>
+                <li>id is given to pull request and for the issues</li>
+                <li>#id can be used to link to milestones or for pullrequests<li>
+                <li>Closes #7 in the pull requests, when the pullrequest is merged it closes the issue #7 also</li>
+            </ol>
+        </div>
+        <h4>Demo to create template for Issues</h4>
+        <div>
+            <ol>
+                <li>we can create mannually like how we did for pullrequest template</li>
+                <li>or we can go to setting and click Set up templates</li>
+                <li>Select bug or feature or custom</li>
+                <li>it will prompt for the commit changes</li>
+                <li>it will create new folder and add template files to that folder</li>
+                <li>next time when we create a new issue GitHub will ask to select the template</li>
+            </ol>
+        </div>
+        <h4>Creating a milestone</h4>
+        <div>
+            <ol>
+                <li>Track progress to certain point</li>
+                <li>Group issues</li>
+                <li>Priotizitions</li>
+                <li>go to issues page click on milestones icon</li>
+                <li>create milestone, give name, update due data, add discriptions</li>
+                <li>select the issues and attach the newly created milestone</li>
+                <li>as the issues are getting closed progress of the milestore will also changes show percentage of completion</li>
+            </ol>
+        </div>
+        <h4>Adding Tags</h4>
+        <div>
+            <ol>
+                <li>A branch points to a snapshot in the history of your project</li>
+                <li>A tag point to an important point in history -V1.0</li>
+                <li>Two types of tags</li>
+                <li>Lightweight</li>
+                <li>Annotated [Message, checksum]</li>
+                <li>Tags can be added later on an existing commit</li>
+                <li>Command to add tag: $ git tag adding -a makes it as annotated tag</li>
+                <li>Downlad the code (zip) with the tag</li>
+                <li>commits to current</li>
+            </ol>
+        </div>
+        <h4>Demo of Taging </h4>
+        <div>
+            <ol>
+                <li>git log : to check the history of the commits: q to exit git log</li>
+                <li>git tag: to get the list of the tags</li>
+                <li>git tag stable main :stable is the name of the tag and will point to main branch</li>
+                <li>git tag</li>
+                <li>git log --oneline --graph</li>
+                <li>git tag -a v0.1 -m "0.1 release" [commitid]</li>
+                <li>git tag</li>
+                <li>git push</li>
+                <li>git push --tags: this will push the tag to the remote</li>
+            </ol>
+        </div>
+        <h4>Creating a Release</h4>
+        <div>
+            <ol>
+                <li>Releases are based on tags</li>    
+                <li>With releases we can create release notes</li>
+                <li>with releases we can bind binary files</li>
+            </ol>
+        </div>
+        <h4>Demo for releases</h4>
+        <div>
+            <ol>
+                <li>Creating releases on GitHub</li>
+                <li>Click on tags, tags pages is opned, next to left we can find releases</li>
+                <li>Create new release, add release notes, attach tag we can add our own zip</li>
+                <li>From tags tab also we can create release by selecting tag... and create release</li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
     <h1>Automating Tasks with GitHub Actions</h1>
+    <div>
+        <h4>Understanding GitHub Actions</h4>
+        <div>
+            <ol>
+                <li>We can use GitHub for many parts of the SDLC</li>
+                <li>Tasks can be automated</li>
+                <li>Automate different tasks</li>
+                <li>Event-driven, will trigger tasks</li>
+                <li>Live in the repository</li>
+                <li>Stored on workflows folder</li>
+                <li>Actions are based on YAML syntax</li>
+                <li>Part of GitHub</li>
+                <li>Templates</li>
+                <li>Available in free plan</li>
+            </ol>
+        </div>
+        <h4>Components of GitHub Actions</h4>
+        <div>
+            <ol>
+                <li>Workflow</li>
+                <li>Workflow contains jobs</li>
+                <li>Event triggers a workflow</li>
+                <li>Workflow contains one or more jobs</li>
+                <li>Each job as steps and actions</li>
+                <li>Executions of these Jobs are done on Runners</li>
+                <li>Runners: servers that runs the automation code</li>
+                <li>it will typically server hosted by GitHub or it can be your own</li>
+                <li>Steps can be action or command line commands</li>
+                <li>actions are the fineist building block of GitHub Actions they are the standalone commands</li>
+                <li>we can create our own actions</li>                
+            </ol>
+        </div>
+        <h4>Creating an action in YAML</h4>
+        <div>
+            <ol>
+                <li>first line - name: first-github-action //name of the workflow</li>
+                <li>second line - on: [push] //when to trigger the workflow here in this e.g. on push. on represents event</li>
+                <li>third line - jobs: //all jobs contained within this workflow</li>
+                <li>fouth line - check-bats-version: //check-bats-version is the name of the job</li>
+                <li>fifth line - runs-on: ubuntu-latest //runner hosted by github</li>
+                <li>sixth line - steps: //grouped by steps </li>
+                <li>seventh line - -uses: actions/checkout@v2 // actions are the smallest tasks it will checkout on the server</li>
+                <li>eigth line - - uses:actions/setup-node@v1 //setup node on the runner server</li>
+                <li>ninth line - -run: npm install -g bats //install bats package on the server, bats package is used for testing the applications</li>
+                <li>tenth line - -run: bats -v //command to get the bats version</li>
+            </ol>
+        </div>
+        <h4>Demo for GitHub Actions</h4>
+        <div>
+            <ol>
+                <li>Select action tab in the repo</li>
+                <li>Based of the repo you will get suggestions</li>
+                <li>Select set up your own workflow yourself</li>
+                <li>it will create a file in .github/workflow/</li>
+                <li>rename main.yaml to sample.yaml</li>
+                <li>add workflow</li>
+                <li>Commit the changes</li>
+                <li>Click on the actions we see new wrokflow</li>
+                <li>at this point it is yellow not executing</li>
+                <li>after sometime it will turn to green</li>
+                <li>click on the workflow to see it details</li>
+            </ol>
+        </div>
+        <h4>Automating tasks</h4>
+        <div>
+            <ol>
+                <li>Types of events</li>
+                <li>Event within GitHub e.g. push, pull</li>
+                <li>List of events can be combined</li>
+                <li>Scheduled, time based events UTC min is 5 mins</li>
+                <li>Webhook events</li>
+                <li>Actions</li>
+                <li>Can create own actions</li>
+                <li>Use community marketplace for actions</li>
+                <li>Types of workflows</li>
+                <li>a. Automations</li>
+                <li>b. CI/CD</li>
+                <li>Contibuous integration</li>
+                <li>Continuous deployment</li>
+            </ol>
+        </div>
+        <h4>Adding a label using a flow to an issue</h4>
+        <div>
+            <ol>
+                <li>go to actions</li>
+                <li>create new actions names label-issues.md</li>
+                <li>New workflow</li>
+                <li>label-isues.yaml</li>
+            </ol>
+        </div>
+        <h4>Dot net core CI/CD workflow using GITHUB Actions</h4>
+        <div>
+            <ol>
+                <li>Create new repo DotNetCodeActionsLab</li>
+                <li>Create new .net core console application</li>
+                <li>Git add .</li>
+                <li>Git commit -m "created new console app"</li>
+                <li>Git push</li>
+                <li>Got to actions tab on github page </li>
+                <li>Select .net suggestion of git</li>
+                <li>Give the file name and commit</li>
+                <li>Action workflow will kick in</li>
+            </ol>
+        </div>
+    </div>
     <h1>Creating a GitHub Wiki</h1>
+    <div>
+        <h4>Create a Wiki for the repository</h4>
+        <ol>
+            <li>Documentation is vital</li>
+            <li>Long-living document to how to use the project</li>
+            <li>Read.me is about the repo</li>
+            <li>Wiki is about the coding standards, why what is designed in this way etc..</li>
+            <li>Wiki is done via the markdown syntax</li>
+        </ol>
+        <h4>Demo of creating a wiki page</h4>
+        <ol>
+            <li>Select the repo and click on the Wikis tab</li>
+            <li>If Wikis tab is not visible go to settings check Wikis</li>
+            <li>Click Create the first page</li>
+            <li>Home page, update content select initial page, save page </li>
+            <li>Click Add a custom footer, _footer</li>
+            <li>Update footer content as Last edited by mreddy on July 30 2023</li>
+            <li>Add new page Getting started</li>
+            <li>Add content and save</li>
+            <li>Add _sidebar</li>
+            <li>- [Home Page](Home)
+                - Quick starts
+                   - [Getting Started](GettingStarted)
+                   - [Sample](Sample)
+            </li>
+            <li>We can add image also to Wiki pages</li>
+            <li>if you don't like working on the wiki on github site you can work on locally by using Clone this wiki locally this wiki </li>
+        </ol>
+    </div>
     <h1>Working with Social Features</h1>
+    <div>
+        <h4>Demo for Creating a Gist</h4>
+        <ol>
+            <li>Gist is a simple way to share snippents and notes with others</li>
+            <li>used to share a file/files code snippets</li>
+            <li>Gists are based on repository</li>
+            <li>Gists can be public or secret</li>
+            <li>Gists can be downloabale</li>
+            <li>Lets create a gist, go to gist.github.com</li>
+            <li>if logged on github the moment open gits.github.com you can start instently share code, notes and snippnets.</li>
+            <li>Add desc</li>
+            <li>Select file and extension</li>
+            <li>Add code</li>
+            <li>Create gist either secret or public </li>
+            <li>on modifying gitst it will show history also</li>
+            <li>we can embade this gistlink in code and also can download</li>
+            <li>we can clone the gist also to local and work on </li>
+        </ol>
+        <div>
+            <h4>Project Board</h4>
+            <ol>
+                <li>organization of work</li>
+                <li>Work on specific feature</li>
+                <li>Checklist</li>
+                <li>Roadmaop</li>
+            </ol>
+        </div>
+        <div>
+            <h4>Demo on project board</h4>
+            <ol>
+                <li>Creating a project board</li>
+                <li>Adding and managing issues</li>
+                <li>Click on the project menu they too are linked to repo</li>
+                <li>Clicking on project will show projects options select on project will be created </li>
+            </ol>
+        </div>
+        <div>
+            <h4>GitHub Pages</h4>
+            <ol>
+                <li>Static hosting No server-side code</li>
+                <li>pages are hosted from a repo</li>
+                <li>pages can be crated online or offline either on github or locally</li>
+                <li>Go to settings and then go to pages</li>
+                <li>Select which branches we want to select the pages</li>
+                <li>and the site is hosted amd available to browse </li>
+            </ol>
+        </div>
+    </div>
 </body>
 </html>
